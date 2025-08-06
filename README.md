@@ -1,102 +1,94 @@
-# ⚽ GOAT Soccer Debates
+# Web Development Final Project - *SoccerHub*
 
-A React web application where users can share their opinions about who is the greatest soccer player of all time. Built with React, Supabase, and modern CSS.
+Submitted by: **Brian Martinez Flores**
 
-## 🌟 Features
+This web app: **Share your post and leave likes on who is the Goat of soccer.**
 
-### Core Features
-- ✅ **Create Posts**: Share your GOAT pick with player name, title, explanation, and image
-- ✅ **Home Feed**: Browse all posts with search and sorting capabilities
-- ✅ **Post Details**: View detailed posts with like functionality
-- ✅ **Edit Posts**: Update your arguments and player picks
-- ✅ **Image Support**: Add player images via URL links
-- ✅ **Like System**: Show appreciation for great GOAT arguments
+Time spent: **10** hours spent in total
 
-### User Experience
-- ✅ **Search**: Find posts by player name or title
-- ✅ **Sorting**: Sort by recent posts or player name
-- ✅ **Responsive Design**: Mobile-friendly interface
-- ✅ **Loading States**: Smooth loading animations
-- ✅ **Glass Morphism**: Modern translucent design
+## Required Features
 
-## 🚀 Quick Start
+The following **required** functionality is completed:
 
-1. **Clone the repository**
-2. **Database Setup**: Configure your Supabase database with the Posts table
-3. **Environment**: Add your Supabase credentials to `.env`
-4. **Install**: `npm install`
-5. **Run**: `npm run dev`
 
-## � Database Schema
+- [✔ ] **Web app includes a create form that allows the user to create posts**
+  - Form requires users to add a post title
+  - Forms should have the *option* for users to add: 
+    - additional textual content
+    - an image added as an external image URL
+- [ ✔] **Web app includes a home feed displaying previously created posts**
+  - Web app must include home feed displaying previously created posts
+  - By default, each post on the posts feed should show only the post's:
+    - creation time
+    - title 
+    - upvotes count
+  - Clicking on a post should direct the user to a new page for the selected post
+- [ ✔] **Users can view posts in different ways**
+  - Users can sort posts by either:
+    -  creation time
+    -  upvotes count
+  - Users can search for posts by title
+- [✔ ] **Users can interact with each post in different ways**
+  - The app includes a separate post page for each created post when clicked, where any additional information is shown, including:
+    - content
+    - image
+    - comments
+  - Users can leave comments underneath a post on the post page
+  - Each post includes an upvote button on the post page. 
+    - Each click increases the post's upvotes count by one
+    - Users can upvote any post any number of times
 
-Your Supabase database should have a `Posts` table with these columns:
-- `id` (UUID, Primary Key)
-- `created_at` (Timestamp)
-- `name` (Text) - Soccer player name
-- `title` (Text) - Post title
-- `content` (Text) - GOAT explanation
-- `image` (Text) - Image URL
-- `submit` (Boolean) - Publication status
-- `likes` (Boolean) - Like status
+- [✔ ] **A post that a user previously created can be edited or deleted from its post pages**
+  - After a user creates a new post, they can go back and edit the post
+  - A previously created post can be deleted from its post page
 
-## 📋 How It Works
+The following **optional** features are implemented:
 
-1. **Share Your Pick**: Create a post with your favorite soccer player
-2. **Explain Your Choice**: Write why you think they're the GOAT
-3. **Add Visuals**: Include an image URL of the player
-4. **Engage**: Like other posts and browse different opinions
-5. **Edit Anytime**: Update your arguments as your opinion evolves
 
-## 🛠 Technology Stack
+- [✔ ] Web app implements pseudo-authentication
+  - Users can only edit and delete posts or delete comments by entering the secret key, which is set by the user during post creation
+  - **or** upon launching the web app, the user is assigned a random user ID. It will be associated with all posts and comments that they make and displayed on them
+  - For both options, only the original user author of a post can update or delete it
+- [✔ ] Users can repost a previous post by referencing its post ID. On the post page of the new post
+  - Users can repost a previous post by referencing its post ID
+  - On the post page of the new post, the referenced post is displayed and linked, creating a thread
+- [✔ ] Users can customize the interface
+  - e.g., selecting the color scheme or showing the content and image of each post on the home feed
+- [✔ ] Users can add more characterics to their posts
+  - Users can share and view web videos
+  - Users can set flags such as "Question" or "Opinion" while creating a post
+  - Users can filter posts by flags on the home feed
+  - Users can upload images directly from their local machine as an image file
+- [✔ ] Web app displays a loading animation whenever data is being fetched
 
-- **Frontend**: React 19.1.0 with React Router 7.7.1
-- **Database**: Supabase (PostgreSQL)
-- **Styling**: Modern CSS with glass morphism design
-- **Build Tool**: Vite 7.0.4
-- **Icons**: Emojis for intuitive UI
+The following **additional** features are implemented:
 
-## 📁 Project Structure
+* [✔ ] List anything else that you added to improve the site's functionality!
 
-```
-src/
-├── components/          # Reusable components
-│   ├── Layout.jsx      # Main layout wrapper
-│   └── Navigation.jsx  # Top navigation bar
-├── pages/              # Page components
-│   ├── HomePage.jsx    # Main feed with posts
-│   ├── CreatePost.jsx  # Post creation form
-│   ├── PostDetails.jsx # Individual post view
-│   └── EditPost.jsx    # Post editing form
-├── config/
-│   └── supabaseClient.js # Supabase configuration
-└── App.jsx             # Main app component with routing
-```
+## Video Walkthrough
 
-## 🎨 Design Features
+Here's a walkthrough of implemented user stories:
 
-- **Glass Morphism**: Modern translucent design elements
-- **Gradient Backgrounds**: Beautiful soccer-themed color transitions
-- **Smooth Animations**: Hover effects and loading states
-- **Responsive Layout**: Mobile-first design approach
-- **Soccer Theme**: Football-inspired UI elements and emojis
+<img src='https://imgur.com/a/tBT7kof.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
 
-## � Recent Updates
+https://briansweb102finaproject.netlify.app/
+https://imgur.com/a/tBT7kof.gif
+## Notes
 
-- ✅ Updated to match user's Supabase Posts table schema
-- ✅ Simplified form fields: name, title, content, image
-- ✅ Removed complex authentication system
-- ✅ Streamlined like functionality
-- ✅ Clean, focused soccer GOAT debate experience
+Describe any challenges encountered while building the app.
 
-## 🚀 Future Enhancements
+## License
 
-- Add user profiles and authentication
-- Implement comment system
-- Add player statistics integration
-- Create tournament-style GOAT brackets
-- Add video content support
-- Implement real-time updates
+    Copyright [2025] [Uefa and Fifa]
 
-## 📄 License
+    Licensed under the Apache License, Version 2.0 (the "License");
+    you may not use this file except in compliance with the License.
+    You may obtain a copy of the License at
 
-MIT License - Perfect for learning React and Supabase!
+        http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing, software
+    distributed under the License is distributed on an "AS IS" BASIS,
+    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+    See the License for the specific language governing permissions and
+    limitations under the License.
